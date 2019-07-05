@@ -21,7 +21,7 @@ $sudo cat /etc/httpd/conf.d/studentapp.conf
 ProxyPass "/student"  "http://localhost:8080/student"
 ProxyPassReverse "/student"  "http://localhost:8080/student"
 
-
+$sudo wget https://raw.githubusercontent.com/devopsdordie/project-1-documentation/master/httpd-index.html -O /var/www/html/index.html
 
 $sudo systemctl restart httpd
 '''
