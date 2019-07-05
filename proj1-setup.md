@@ -54,3 +54,8 @@ student $vim  conf/context.xml
 #### Add the above content just before the last line, Last line ususally looks like  </Context>
 #### Note: Replace USERNAME, PASSWORD, RDS-ENDPOINT, DATABASE with associated RDS valuses after creating it.
 ```
+
+Switch back to CentOS user and run the following commands. 
+```
+#wget 
+
