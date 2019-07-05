@@ -26,3 +26,18 @@ $sudo wget https://raw.githubusercontent.com/devopsdordie/project-1-documentatio
 $sudo systemctl restart httpd
 ```
 
+#### 2. Install and Start Tomcat Sever.
+
+While seting up any application it is always a good practice to create a user and run the applicaiton using that user. 
+For that we are going to use `student` user to run out student application. 
+
+#### Add user and install java
+```
+$sudo useradd student
+$sudo yum install java -y
+```
+
+#### Download and setup App server and run it as student user
+```
+$sudo su - student
+student $ wget https://www.apache.org/dist/tomcat/tomcat-8/v8.5.42/bin/apache-tomcat-8.5.42.tar.gz.asc
