@@ -7,15 +7,15 @@
 
 #### 1. Install and start Web Server.
 
-"""
+```
 $sudo yum install httpd -y
 $sudo systemctl enable httpd
 $sudo systemctl start httpd
-"""
+```
 
 ##### Configure Web Server. 
 
-'''
+```
 
 $sudo cat /etc/httpd/conf.d/studentapp.conf
 ProxyPass "/student"  "http://localhost:8080/student"
@@ -24,5 +24,5 @@ ProxyPassReverse "/student"  "http://localhost:8080/student"
 $sudo wget https://raw.githubusercontent.com/devopsdordie/project-1-documentation/master/httpd-index.html -O /var/www/html/index.html
 
 $sudo systemctl restart httpd
-'''
+```
 
