@@ -7,11 +7,11 @@
 
 #### 1. Install and start Web Server.
 
-'''
+"""
 $sudo yum install httpd -y
 $sudo systemctl enable httpd
 $sudo systemctl start httpd
-'''
+"""
 
 ##### Configure Web Server. 
 
