@@ -57,5 +57,9 @@ student $vim  conf/context.xml
 
 Switch back to CentOS user and run the following commands. 
 ```
-#wget 
+#wget https://raw.githubusercontent.com/devopsdordie/project-1-documentation/master/tomcat-init -O /etc/init.d/tomcat
+#chmod ugo+x /etc/init.d/tomcat
+#systemctl daemon-reload
+#systemctl start-tomcat
+#systemctl enable tomcat
 
