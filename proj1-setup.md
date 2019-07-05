@@ -41,3 +41,16 @@ $sudo yum install java -y
 ```
 $sudo su - student
 student $ wget https://www.apache.org/dist/tomcat/tomcat-8/v8.5.42/bin/apache-tomcat-8.5.42.tar.gz.asc
+student $tar -xf apache-tomcat-8.5.42.tar.gz
+student $cd apache-tomcat-8.5.42/webapps
+student $wget https://github.com/citb34/project-1-documentation/raw/master/studentapp.war -O webapps/student.war
+student $vim  conf/context.xml
+
+<Resource name="jdbc/TestDB" auth="Container" type="javax.sql.DataSource"
+               maxActive="100" maxIdle="30" maxWait="10000"
+               username="USERNAME" password="PASSWORD" driverClassName="com.mysql.jdbc.Driver"
+               url="jdbc:mysql://RDS-ENDPOINT:3306/DATABASE"/>
+
+#### Add the above content just before the last line, Last line ususally looks like  </Context>
+#### Note: Replace USERNAME, PASSWORD, RDS-ENDPOINT, DATABASE with associated RDS valuses after creating it.
+```
